@@ -6,6 +6,7 @@ public class AuthResponse {
     private String token;
     private String email;
     private String fullName;
+    private String role;
     private boolean success;
 
     public AuthResponse() {
@@ -16,13 +17,18 @@ public class AuthResponse {
         this.success = success;
     }
 
-    public AuthResponse(String message, String token, String email, String fullName, boolean success) {
+    // constructor đầy đủ
+    public AuthResponse(String message, String token, String email,
+                        String fullName, String role, boolean success) {
         this.message = message;
         this.token = token;
         this.email = email;
         this.fullName = fullName;
+        this.role = role;
         this.success = success;
     }
+
+    // getter/setter...
 
     public String getMessage() {
         return message;
@@ -54,6 +60,14 @@ public class AuthResponse {
 
     public void setFullName(String fullName) {
         this.fullName = fullName;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 
     public boolean isSuccess() {

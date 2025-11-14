@@ -23,20 +23,21 @@ import java.util.Arrays;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
-    
+
     private final CustomUserDetailsService userDetailsService;
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
-    
-    public SecurityConfig(CustomUserDetailsService userDetailsService, JwtAuthenticationFilter jwtAuthenticationFilter) {
+
+    public SecurityConfig(CustomUserDetailsService userDetailsService,
+            JwtAuthenticationFilter jwtAuthenticationFilter) {
         this.userDetailsService = userDetailsService;
         this.jwtAuthenticationFilter = jwtAuthenticationFilter;
     }
-    
+
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
-    
+
     @Bean
     public DaoAuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
@@ -44,57 +45,71 @@ public class SecurityConfig {
         authProvider.setPasswordEncoder(passwordEncoder());
         return authProvider;
     }
-    
+
     @Bean
-    public AuthenticationManager authenticationManager(AuthenticationConfiguration authConfig) throws Exception {
+    public AuthenticationManager authenticationManager(
+            AuthenticationConfiguration authConfig) throws Exception {
         return authConfig.getAuthenticationManager();
     }
-    
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-            .csrf(csrf -> csrf.disable())   // đã tắt CSRF để POST JSON không cần token
+            .csrf(csrf -> csrf.disable())
+            .cors(cors -> cors.configurationSource(corsConfigurationSource()))
             .sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests(auth -> auth
+                //  cho phép các trang/public API
                 .requestMatchers(
                     "/",
                     "/error",
-
-                    // ✅ file giao diện
                     "/auth/login.html",
                     "/auth/register.html",
                     "/auth/**",
-
-                    // ✅ API auth (controller của bạn)
                     "/api/auth/**",
-
-                    // ✅ static
                     "/css/**",
                     "/js/**",
                     "/images/**",
                     "/webjars/**"
                 ).permitAll()
+
+                //  Giao diện tĩnh user/admin cho phép truy cập,
+                // còn phân quyền điều hướng nằm ở JS dựa trên data.role
+                .requestMatchers("/user/**", "/admin/**").permitAll()
+
+                //  chỉ ADMIN được vào /admin/**
+                .requestMatchers(
+                    "/api/admin/**"
+                
+                ).hasRole("ADMIN")
+
+                //  USER hoặc ADMIN được vào /user/**
+                .requestMatchers(
+                    "/api/user/**"
+                ).hasAnyRole("USER", "ADMIN")
+
+                //  các request khác phải đăng nhập
                 .anyRequest().authenticated()
             )
-            // nếu bạn có authenticationProvider() và jwtAuthenticationFilter thì giữ nguyên 2 dòng này:
             .authenticationProvider(authenticationProvider())
             .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }
 
-        
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(Arrays.asList("http://localhost:3000", "http://localhost:8080"));
-        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+        configuration.setAllowedOrigins(
+                Arrays.asList("http://localhost:3000", "http://localhost:8080"));
+        configuration.setAllowedMethods(
+                Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(Arrays.asList("*"));
         configuration.setAllowCredentials(true);
-        
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+
+        UrlBasedCorsConfigurationSource source =
+                new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
         return source;
     }
 }
-

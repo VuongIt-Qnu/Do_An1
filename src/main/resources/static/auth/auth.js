@@ -81,6 +81,14 @@ if (loginForm) {
         localStorage.setItem("token", data.accessToken);
       }
 
+      //  Phân quyền theo role
+      if (data.role === "ADMIN") {
+        window.location.href = "/admin/dashboard.html";
+      } else {
+        // mặc định USER
+        window.location.href = "/user/home.html";
+      }
+
       // TODO: chuyển qua trang Home
       // window.location.href = "/home.html";
     } catch (err) {

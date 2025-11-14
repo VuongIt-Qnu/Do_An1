@@ -62,6 +62,7 @@ public class UserService {
                 token,
                 user.getEmail(),
                 user.getFullName(),
+                user.getRole(),
                 true
         );
     }
@@ -82,7 +83,14 @@ public class UserService {
             // Generate JWT token
             String token = jwtUtil.generateToken(user.getEmail());
             
-            return new AuthResponse("Đăng nhập thành công", token, user.getEmail(), user.getFullName(), true);
+            return new AuthResponse(
+                "Đăng nhập thành công",
+                token,
+                user.getEmail(),
+                user.getFullName(),
+                user.getRole(),
+                true
+        );
         } catch (Exception e) {
             return new AuthResponse("Email hoặc mật khẩu không đúng", false);
         }
