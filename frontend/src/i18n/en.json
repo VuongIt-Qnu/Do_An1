@@ -1,0 +1,143 @@
+{
+  "nav": {
+    "home": "Home",
+    "rooms": "Rooms",
+    "about": "About",
+    "contact": "Contact",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "profile": "Profile",
+    "myBookings": "My Bookings",
+    "adminDashboard": "Admin",
+    "ownerDashboard": "Hotel Management"
+  },
+  "home": {
+    "heroTitle": "Experience the Perfect Stay",
+    "heroSubtitle": "Discover hundreds of amazing hotels at the best prices",
+    "searchPlaceholder": "Search rooms...",
+    "featuredRooms": "Featured Rooms",
+    "viewAll": "View All",
+    "bookNow": "Book Now"
+  },
+  "rooms": {
+    "title": "Room Listing",
+    "filter": "Filter Rooms",
+    "priceRange": "Price Range",
+    "capacity": "Capacity",
+    "roomType": "Room Type",
+    "checkIn": "Check-in Date",
+    "checkOut": "Check-out Date",
+    "perNight": "/ night",
+    "available": "Available",
+    "occupied": "Occupied",
+    "guests": "guests",
+    "viewDetail": "View Details",
+    "noRooms": "No rooms found matching your criteria",
+    "amenities": "Amenities",
+    "description": "Description"
+  },
+  "booking": {
+    "title": "Book a Room",
+    "customerInfo": "Guest Information",
+    "fullName": "Full Name",
+    "email": "Email",
+    "phone": "Phone Number",
+    "checkIn": "Check-in Date",
+    "checkOut": "Check-out Date",
+    "guests": "Number of Guests",
+    "notes": "Special Requests",
+    "paymentMethod": "Payment Method",
+    "totalPrice": "Total Price",
+    "nights": "nights",
+    "confirm": "Confirm Booking",
+    "cancel": "Cancel",
+    "success": "Booking Successful!",
+    "confirmationSent": "Confirmation email sent to",
+    "status": {
+      "PENDING": "Pending",
+      "CONFIRMED": "Confirmed",
+      "CANCELLED": "Cancelled",
+      "COMPLETED": "Completed"
+    },
+    "cancelBooking": "Cancel Booking",
+    "cancelReason": "Cancellation Reason",
+    "noBookings": "No bookings found"
+  },
+  "auth": {
+    "loginTitle": "Sign In",
+    "registerTitle": "Create Account",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "fullName": "Full Name",
+    "phone": "Phone Number",
+    "forgotPassword": "Forgot Password?",
+    "noAccount": "Don't have an account?",
+    "haveAccount": "Already have an account?",
+    "loginBtn": "Sign In",
+    "registerBtn": "Register",
+    "resetPassword": "Reset Password"
+  },
+  "admin": {
+    "dashboard": "Dashboard",
+    "totalBookings": "Total Bookings",
+    "totalRevenue": "Revenue",
+    "totalUsers": "Users",
+    "totalRooms": "Rooms",
+    "recentBookings": "Recent Bookings",
+    "manageUsers": "Manage Users",
+    "manageHotels": "Manage Hotels",
+    "manageRooms": "Manage Rooms",
+    "manageBookings": "Manage Bookings",
+    "reports": "Reports",
+    "approve": "Approve",
+    "reject": "Reject",
+    "disable": "Disable",
+    "enable": "Enable"
+  },
+  "owner": {
+    "dashboard": "Dashboard",
+    "myHotels": "My Hotels",
+    "addHotel": "Add Hotel",
+    "manageRooms": "Manage Rooms",
+    "viewBookings": "View Bookings",
+    "revenue": "Revenue",
+    "exportReport": "Export Report"
+  },
+  "payment": {
+    "method": {
+      "BANK_TRANSFER": "Bank Transfer",
+      "MOMO": "MoMo Wallet",
+      "CASH": "Cash",
+      "QR_CODE": "QR Payment"
+    },
+    "status": {
+      "PENDING": "Pending",
+      "PAID": "Paid",
+      "REFUNDED": "Refunded",
+      "FAILED": "Failed"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "back": "Back",
+    "search": "Search",
+    "filter": "Filter",
+    "reset": "Reset",
+    "close": "Close",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "page": "Page",
+    "of": "of",
+    "previous": "Previous",
+    "next": "Next",
+    "vnd": "VND",
+    "required": "This field is required"
+  }
+}

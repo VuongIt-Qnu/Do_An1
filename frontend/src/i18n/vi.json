@@ -1,0 +1,143 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "rooms": "Phòng",
+    "about": "Giới thiệu",
+    "contact": "Liên hệ",
+    "login": "Đăng nhập",
+    "register": "Đăng ký",
+    "logout": "Đăng xuất",
+    "profile": "Hồ sơ",
+    "myBookings": "Đặt phòng của tôi",
+    "adminDashboard": "Quản trị",
+    "ownerDashboard": "Quản lý khách sạn"
+  },
+  "home": {
+    "heroTitle": "Trải nghiệm kỳ nghỉ hoàn hảo",
+    "heroSubtitle": "Khám phá hàng trăm khách sạn tuyệt vời với giá tốt nhất",
+    "searchPlaceholder": "Tìm kiếm phòng...",
+    "featuredRooms": "Phòng nổi bật",
+    "viewAll": "Xem tất cả",
+    "bookNow": "Đặt ngay"
+  },
+  "rooms": {
+    "title": "Danh sách phòng",
+    "filter": "Lọc phòng",
+    "priceRange": "Khoảng giá",
+    "capacity": "Sức chứa",
+    "roomType": "Loại phòng",
+    "checkIn": "Ngày nhận phòng",
+    "checkOut": "Ngày trả phòng",
+    "perNight": "/ đêm",
+    "available": "Còn trống",
+    "occupied": "Đã đặt",
+    "guests": "khách",
+    "viewDetail": "Xem chi tiết",
+    "noRooms": "Không tìm thấy phòng phù hợp",
+    "amenities": "Tiện nghi",
+    "description": "Mô tả"
+  },
+  "booking": {
+    "title": "Đặt phòng",
+    "customerInfo": "Thông tin khách hàng",
+    "fullName": "Họ và tên",
+    "email": "Email",
+    "phone": "Số điện thoại",
+    "checkIn": "Ngày nhận phòng",
+    "checkOut": "Ngày trả phòng",
+    "guests": "Số khách",
+    "notes": "Ghi chú đặc biệt",
+    "paymentMethod": "Phương thức thanh toán",
+    "totalPrice": "Tổng tiền",
+    "nights": "đêm",
+    "confirm": "Xác nhận đặt phòng",
+    "cancel": "Hủy",
+    "success": "Đặt phòng thành công!",
+    "confirmationSent": "Email xác nhận đã được gửi đến",
+    "status": {
+      "PENDING": "Chờ xác nhận",
+      "CONFIRMED": "Đã xác nhận",
+      "CANCELLED": "Đã hủy",
+      "COMPLETED": "Hoàn tất"
+    },
+    "cancelBooking": "Hủy đặt phòng",
+    "cancelReason": "Lý do hủy",
+    "noBookings": "Chưa có đặt phòng nào"
+  },
+  "auth": {
+    "loginTitle": "Đăng nhập",
+    "registerTitle": "Đăng ký tài khoản",
+    "email": "Email",
+    "password": "Mật khẩu",
+    "confirmPassword": "Xác nhận mật khẩu",
+    "fullName": "Họ và tên",
+    "phone": "Số điện thoại",
+    "forgotPassword": "Quên mật khẩu?",
+    "noAccount": "Chưa có tài khoản?",
+    "haveAccount": "Đã có tài khoản?",
+    "loginBtn": "Đăng nhập",
+    "registerBtn": "Đăng ký",
+    "resetPassword": "Đặt lại mật khẩu"
+  },
+  "admin": {
+    "dashboard": "Tổng quan",
+    "totalBookings": "Tổng đặt phòng",
+    "totalRevenue": "Doanh thu",
+    "totalUsers": "Người dùng",
+    "totalRooms": "Số phòng",
+    "recentBookings": "Đặt phòng gần đây",
+    "manageUsers": "Quản lý người dùng",
+    "manageHotels": "Quản lý khách sạn",
+    "manageRooms": "Quản lý phòng",
+    "manageBookings": "Quản lý đặt phòng",
+    "reports": "Báo cáo",
+    "approve": "Duyệt",
+    "reject": "Từ chối",
+    "disable": "Vô hiệu hóa",
+    "enable": "Kích hoạt"
+  },
+  "owner": {
+    "dashboard": "Bảng điều khiển",
+    "myHotels": "Khách sạn của tôi",
+    "addHotel": "Thêm khách sạn",
+    "manageRooms": "Quản lý phòng",
+    "viewBookings": "Xem đặt phòng",
+    "revenue": "Doanh thu",
+    "exportReport": "Xuất báo cáo"
+  },
+  "payment": {
+    "method": {
+      "BANK_TRANSFER": "Chuyển khoản ngân hàng",
+      "MOMO": "Ví MoMo",
+      "CASH": "Tiền mặt",
+      "QR_CODE": "Thanh toán QR"
+    },
+    "status": {
+      "PENDING": "Chờ thanh toán",
+      "PAID": "Đã thanh toán",
+      "REFUNDED": "Đã hoàn tiền",
+      "FAILED": "Thất bại"
+    }
+  },
+  "common": {
+    "loading": "Đang tải...",
+    "error": "Có lỗi xảy ra",
+    "success": "Thành công",
+    "save": "Lưu",
+    "edit": "Chỉnh sửa",
+    "delete": "Xóa",
+    "back": "Quay lại",
+    "search": "Tìm kiếm",
+    "filter": "Lọc",
+    "reset": "Đặt lại",
+    "close": "Đóng",
+    "confirm": "Xác nhận",
+    "cancel": "Hủy",
+    "page": "Trang",
+    "of": "của",
+    "previous": "Trước",
+    "next": "Sau",
+    "vnd": "đ",
+    "required": "Trường này là bắt buộc"
+  }
+}

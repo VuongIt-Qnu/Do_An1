@@ -1,0 +1,48 @@
+{
+  "name": "hotel-management-cnpm2",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Hotel Management System CNPM2 — ReactJS Frontend",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.24.0",
+    "axios": "^1.7.2",
+    "i18next": "^23.11.5",
+    "react-i18next": "^14.1.2",
+    "i18next-browser-languagedetector": "^8.0.0",
+    "react-hook-form": "^7.52.0",
+    "@hookform/resolvers": "^3.9.0",
+    "yup": "^1.4.0",
+    "react-datepicker": "^7.3.0",
+    "react-toastify": "^10.0.5",
+    "react-query": "^3.39.3",
+    "bootstrap": "^5.3.3",
+    "react-bootstrap": "^2.10.3",
+    "bootstrap-icons": "^1.11.3",
+    "recharts": "^2.12.7",
+    "date-fns": "^3.6.0",
+    "ajv": "^8.12.0",
+    "ajv-keywords": "^5.1.0"
+  },
+  "devDependencies": {
+    "react-scripts": "5.0.1",
+    "@testing-library/react": "^16.0.0",
+    "@testing-library/jest-dom": "^6.4.6",
+    "@testing-library/user-event": "^14.5.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": ["react-app", "react-app/jest"]
+  },
+  "browserslist": {
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
+  },
+  "proxy": "http://localhost:5000"
+}

@@ -1,0 +1,160 @@
+/* =============================================================================
+   Hotel Management System CNPM2 — Global Styles
+   Bootstrap 5 base, custom overrides and utilities
+   ============================================================================= */
+
+/* ── Root Variables ──────────────────────────────────────────────────────── */
+:root {
+  --primary: #0d6efd;
+  --warning: #ffc107;
+  --dark: #212529;
+  --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* ── Base ────────────────────────────────────────────────────────────────── */
+body {
+  font-family: var(--font-main);
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+/* ── Smooth scroll ───────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ── Room Card Hover Effect ──────────────────────────────────────────────── */
+.room-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 12px !important;
+  overflow: hidden;
+}
+
+.room-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12) !important;
+}
+
+.room-card:hover img {
+  transform: scale(1.05);
+}
+
+/* ── Navbar active link ──────────────────────────────────────────────────── */
+.navbar .nav-link.active {
+  color: var(--warning) !important;
+  font-weight: 600;
+}
+
+/* ── Buttons ─────────────────────────────────────────────────────────────── */
+.btn {
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0d6efd, #0958d9);
+  border: none;
+}
+
+.btn-warning {
+  background: linear-gradient(135deg, #ffc107, #fd7e14);
+  border: none;
+  color: #212529;
+}
+
+/* ── Cards ───────────────────────────────────────────────────────────────── */
+.card {
+  border-radius: 12px !important;
+}
+
+.card.shadow-sm {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* ── Form Controls ───────────────────────────────────────────────────────── */
+.form-control, .form-select {
+  border-radius: 8px;
+  border-color: #dee2e6;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+}
+
+/* ── Tables ──────────────────────────────────────────────────────────────── */
+.table th {
+  font-weight: 600;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #6c757d;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+/* ── Badges ──────────────────────────────────────────────────────────────── */
+.badge {
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 4px 8px;
+}
+
+/* ── Loading ─────────────────────────────────────────────────────────────── */
+.spinner-border {
+  border-width: 3px;
+}
+
+/* ── Admin/Owner Sidebar active link ─────────────────────────────────────── */
+nav a.active {
+  background: rgba(13, 110, 253, 0.15) !important;
+  color: #fff !important;
+}
+
+/* ── Input Group flat borders ────────────────────────────────────────────── */
+.input-group .input-group-text {
+  border-radius: 8px 0 0 8px;
+}
+
+.input-group .form-control:last-child,
+.input-group .input-group-text:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+/* ── Pagination ──────────────────────────────────────────────────────────── */
+.pagination .page-link {
+  border-radius: 6px;
+  margin: 0 2px;
+  color: var(--primary);
+}
+
+.pagination .page-item.active .page-link {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* ── Hero Section ────────────────────────────────────────────────────────── */
+.hero-section {
+  position: relative;
+}
+
+/* ── Toast overrides ─────────────────────────────────────────────────────── */
+.Toastify__toast {
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+
+/* ── Responsive utilities ────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 100vh;
+    text-align: center;
+  }
+
+  .hero-section .display-4 {
+    font-size: 2rem;
+  }
+}

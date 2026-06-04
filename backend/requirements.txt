@@ -1,0 +1,54 @@
+# ============================================================
+# Hotel Management System CNPM2 - Python Dependencies
+# ============================================================
+
+# Core Web Framework
+flask==3.0.3
+flask-cors==4.0.1
+
+# Authentication & Security
+flask-jwt-extended==4.6.0
+bcrypt==4.1.3
+
+# Database - PostgreSQL
+flask-sqlalchemy==3.1.1
+psycopg2-binary==2.9.9
+sqlalchemy==2.0.30
+
+# Database - MongoDB
+flask-pymongo==2.3.0
+pymongo==4.7.2
+
+# Serialization & Validation
+marshmallow==3.21.3
+flask-marshmallow==1.2.1
+marshmallow-sqlalchemy==1.0.0
+
+# Email
+flask-mail==0.10.0
+
+# Environment Variables
+python-dotenv==1.0.1
+
+# Report Export
+reportlab==4.2.0          # PDF generation
+openpyxl==3.1.4           # Excel generation
+
+# HTTP Requests (for payment simulation)
+requests==2.32.3
+
+# Production Server
+gunicorn==22.0.0
+
+# Testing
+pytest==8.2.2
+pytest-flask==1.3.0
+factory-boy==3.3.0
+
+# Background Tasks (optional - uncomment if using Celery)
+# celery[redis]==5.4.0
+# redis==5.0.6
+
+# Utilities
+python-dateutil==2.9.0.post0
+Pillow==10.4.0             # Image processing (optional)
